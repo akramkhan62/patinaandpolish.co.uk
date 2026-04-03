@@ -143,11 +143,17 @@ nav {
   margin-top: 2px;
 }
 
-/* Regular navigation links (grey) */
+.nav-links { 
+  display: flex; 
+  gap: 40px; 
+  list-style: none; 
+  align-items: center; 
+}
+
 .nav-links a { 
   font-family: 'Palatino', 'Georgia', serif; 
   font-size: 14px; 
-  color: var(--mid-grey);
+  color: var(--mid-grey); 
   font-weight: 500; 
   transition: color 0.2s;
   letter-spacing: 0.5px;
@@ -157,7 +163,7 @@ nav {
   color: var(--burgundy); 
 }
 
-/* Request Quote button (white text, burgundy background) */
+/* Request Quote button specific styling */
 a.nav-cta {
   background: var(--burgundy) !important;
   color: #FFFFFF !important;
@@ -175,48 +181,6 @@ a.nav-cta {
 a.nav-cta:hover { 
   background: var(--burgundy-dark) !important;
   color: #FFFFFF !important;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(107,44,62,0.4);
-}
-
-/* Navigation Request Quote button - specific override */
-a.nav-cta {
-  background: var(--burgundy) !important;
-  color: #FFFFFF !important;
-  padding: 10px 24px !important;
-  border-radius: 2px;
-  font-weight: 700;
-  transition: all 0.3s;
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 1px;
-  box-shadow: 0 2px 8px rgba(107,44,62,0.3);
-  display: inline-block;
-}
-
-a.nav-cta:hover { 
-  background: var(--burgundy-dark) !important;
-  color: #FFFFFF !important;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(107,44,62,0.4);
-}
-
-.nav-cta {
-  background: var(--burgundy); 
-  color: var(--white);
-  padding: 10px 24px; 
-  border-radius: 2px;
-  font-weight: 700;
-  transition: all 0.2s;
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 1px;
-  box-shadow: 0 2px 8px rgba(107,44,62,0.3);
-}
-
-.nav-cta:hover { 
-  background: var(--burgundy-dark);
-  color: var(--white);
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(107,44,62,0.4);
 }

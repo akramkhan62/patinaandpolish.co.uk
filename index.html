@@ -143,28 +143,25 @@ nav {
   margin-top: 2px;
 }
 
-.nav-links { 
-  display: flex; 
-  gap: 40px; 
-  list-style: none; 
-  align-items: center; 
-}
-
+/* Regular navigation links (grey) */
 .nav-links a { 
   font-family: 'Palatino', 'Georgia', serif; 
   font-size: 14px; 
-  color: var(--white); 
+  color: var(--mid-grey);
   font-weight: 500; 
   transition: color 0.2s;
   letter-spacing: 0.5px;
 }
 
-.nav-links a:hover { color: var(--burgundy); }
+.nav-links a:hover { 
+  color: var(--burgundy); 
+}
 
- .nav-links .nav-cta {
+/* Request Quote button (white text, burgundy background) */
+a.nav-cta {
   background: var(--burgundy) !important;
   color: #FFFFFF !important;
-  padding: 10px 24px;
+  padding: 10px 24px !important;
   border-radius: 2px;
   font-weight: 700;
   transition: all 0.3s;
@@ -172,14 +169,37 @@ nav {
   font-size: 12px;
   letter-spacing: 1px;
   box-shadow: 0 2px 8px rgba(107,44,62,0.3);
+  display: inline-block;
 }
 
-.nav-links .nav-cta:hover { 
+a.nav-cta:hover { 
   background: var(--burgundy-dark) !important;
   color: #FFFFFF !important;
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(107,44,62,0.4);
-} 
+}
+
+/* Navigation Request Quote button - specific override */
+a.nav-cta {
+  background: var(--burgundy) !important;
+  color: #FFFFFF !important;
+  padding: 10px 24px !important;
+  border-radius: 2px;
+  font-weight: 700;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(107,44,62,0.3);
+  display: inline-block;
+}
+
+a.nav-cta:hover { 
+  background: var(--burgundy-dark) !important;
+  color: #FFFFFF !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(107,44,62,0.4);
+}
 
 .nav-cta {
   background: var(--burgundy); 

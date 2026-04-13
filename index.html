@@ -322,7 +322,88 @@ a.nav-cta:hover {
   font-size: 14px;
 }
 
-/* ========== SERVICES SECTION UPDATES ========== */
+/* ========== SECTION STRUCTURE ========== */
+
+.section-tag {
+  display: inline-block;
+  font-family: 'Palatino', 'Georgia', serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--burgundy);
+  background: rgba(107,44,62,0.08);
+  padding: 8px 16px;
+  border-radius: 2px;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: clamp(32px, 4vw, 48px);
+  color: var(--charcoal);
+  margin-bottom: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  font-size: 18px;
+  color: var(--mid-grey);
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.services-intro {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* ========== SERVICES GRID ========== */
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+}
+
+.service-item {
+  background: white;
+  padding: 40px 32px;
+  border: 1px solid var(--light-grey);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(107,44,62,0.12);
+}
+
+.service-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.service-item h3 {
+  font-size: 24px;
+  color: var(--burgundy);
+  margin-bottom: 12px;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* Responsive services grid */
+@media (max-width: 960px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+    
+    /* ========== SERVICES SECTION UPDATES ========== */
 
 /* Featured service card */
 .service-item.featured {

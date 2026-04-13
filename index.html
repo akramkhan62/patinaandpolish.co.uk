@@ -403,6 +403,97 @@ a.nav-cta:hover {
   }
 }
     
+/* ========== HOW I WORK SECTION ========== */
+
+.how-work-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.how-work-steps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+.how-work-step {
+  background: white;
+  padding: 32px;
+  border: 1px solid var(--light-grey);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.how-work-step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(107,44,62,0.12);
+  border-color: var(--burgundy);
+}
+
+.how-work-number {
+  width: 48px;
+  height: 48px;
+  background: var(--burgundy);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: 'Palatino', 'Georgia', serif;
+}
+
+.how-work-step h3 {
+  font-size: 22px;
+  color: var(--burgundy);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.how-work-step p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--charcoal);
+  margin: 0;
+}
+
+.how-work-conclusion {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background: linear-gradient(135deg, rgba(245,239,230,0.4) 0%, rgba(250,250,248,0.4) 100%);
+  border-radius: 4px;
+}
+
+.how-work-conclusion p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--charcoal);
+  margin-bottom: 20px;
+}
+
+.how-work-tagline {
+  font-size: 20px;
+  color: var(--burgundy);
+  font-style: italic;
+  font-family: 'Garamond', 'Georgia', serif;
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .how-work-steps {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+    
     /* ========== SERVICES SECTION UPDATES ========== */
 
 /* Featured service card */

@@ -716,7 +716,7 @@ a.nav-cta:hover {
 
 .portfolio-item {
   position: relative;
-  aspect-ratio: 4/3;
+  /* aspect-ratio removed - let images use natural size */
   overflow: hidden;
   border: 4px solid var(--white);
   box-shadow: 0 4px 16px rgba(44,44,44,0.1);
@@ -733,7 +733,7 @@ a.nav-cta:hover {
 
 .portfolio-item img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   display: block;
   transition: transform 0.3s ease;

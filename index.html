@@ -678,71 +678,89 @@ a.nav-cta:hover {
 }
 
 /* ========== PORTFOLIO ========== */
-.portfolio-grid {
+
+.portfolio-project {
+  margin-bottom: 80px;
+}
+
+.portfolio-project:last-child {
+  margin-bottom: 0;
+}
+
+.portfolio-project-header {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio-project-title {
+  font-size: 32px;
+  color: var(--burgundy);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.portfolio-project-desc {
+  font-size: 17px;
+  color: var(--mid-grey);
+  line-height: 1.7;
+}
+
+.portfolio-gallery {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px;
-  margin-top: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
 }
 
 .portfolio-item {
   position: relative;
   aspect-ratio: 4/3;
-  background: var(--light-grey);
   overflow: hidden;
-  border: 8px solid var(--white);
-  box-shadow: 0 4px 24px rgba(44,44,44,0.1);
+  border: 4px solid var(--white);
+  box-shadow: 0 4px 16px rgba(44,44,44,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: var(--light-grey);
 }
 
-.portfolio-placeholder {
+.portfolio-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(107,44,62,0.2);
+  border-color: var(--burgundy);
+}
+
+.portfolio-item img {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: var(--charcoal);
-  color: var(--cream);
-  font-family: 'Palatino', 'Georgia', serif;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
-.portfolio-placeholder .icon {
-  font-size: 60px;
-  margin-bottom: 16px;
-  opacity: 0.3;
+.portfolio-item:hover img {
+  transform: scale(1.05);
 }
 
-.portfolio-placeholder p {
-  color: var(--cream);
-  opacity: 0.6;
-  font-size: 14px;
-}
-
-.portfolio-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(44,44,44,0.9) 0%, transparent 100%);
-  padding: 32px 24px;
-  transform: translateY(100%);
-  transition: transform 0.3s;
-}
-
-.portfolio-item:hover .portfolio-overlay {
-  transform: translateY(0);
-}
-
-.portfolio-title {
-  font-size: 20px;
-  color: var(--cream);
-  margin-bottom: 8px;
-  font-weight: 400;
-}
-
-.portfolio-desc {
-  font-size: 14px;
-  color: rgba(245,239,230,0.8);
+/* Responsive */
+@media (max-width: 768px) {
+  .portfolio-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  
+  .portfolio-project {
+    margin-bottom: 60px;
+  }
+  
+  .portfolio-project-title {
+    font-size: 26px;
+  }
+  
+  .portfolio-project-desc {
+    font-size: 15px;
+  }
 }
 
 /* ========== PROCESS ========== */
@@ -1331,93 +1349,68 @@ footer {
     <div class="services-intro">
       <span class="section-tag">Portfolio</span>
       <h2 class="section-title">Recent Projects</h2>
-      <p class="section-subtitle">A selection of completed period property decoration projects across London.</p>
+      <p class="section-subtitle">Completed period property decoration projects showcasing our diagnostic approach and transformation expertise across London.</p>
     </div>
-    <div class="portfolio-grid">
-      
-      <div class="portfolio-item">
-        <div class="portfolio-placeholder">
-          <div class="icon">🏡</div>
-          <p>Victorian Terrace - Hackney</p>
+    
+    <!-- PROJECT 1: EDWARDIAN WANSTEAD -->
+    <div class="portfolio-project">
+      <div class="portfolio-project-header">
+        <h3 class="portfolio-project-title">Edwardian Property - Wanstead</h3>
+        <p class="portfolio-project-desc">Complete transformation respecting original Edwardian features while creating a fresh, liveable space for modern family life.</p>
+      </div>
+      <div class="portfolio-gallery">
+        <div class="portfolio-item">
+          <img src="edwardian1-wanstead.jpg" alt="Edwardian Property Wanstead - Transformation 1">
         </div>
-        <div class="portfolio-overlay">
-          <h3 class="portfolio-title">Victorian Terrace</h3>
-          <p class="portfolio-desc">Complete interior decoration with natural lime finishes and period-appropriate colors. Hackney, London.</p>
+        <div class="portfolio-item">
+          <img src="edwardian2-wanstead.jpg" alt="Edwardian Property Wanstead - Transformation 2">
+        </div>
+        <div class="portfolio-item">
+          <img src="edwardian3-wanstead.jpg" alt="Edwardian Property Wanstead - Transformation 3">
+        </div>
+        <div class="portfolio-item">
+          <img src="edwardian4-wanstead.jpg" alt="Edwardian Property Wanstead - Transformation 4">
+        </div>
+        <div class="portfolio-item">
+          <img src="edwardian5-wanstead.jpg" alt="Edwardian Property Wanstead - Transformation 5">
         </div>
       </div>
-
-      <div class="portfolio-item">
-        <div class="portfolio-placeholder">
-          <div class="icon">🏛️</div>
-          <p>Georgian Townhouse - Islington</p>
-        </div>
-        <div class="portfolio-overlay">
-          <h3 class="portfolio-title">Georgian Townhouse</h3>
-          <p class="portfolio-desc">Restoration of period features with authentic paint techniques. Islington, London.</p>
-        </div>
-      </div>
-
-      <div class="portfolio-item">
-        <div class="portfolio-placeholder">
-          <div class="icon">🏠</div>
-          <p>Edwardian Flat - Clapham</p>
-        </div>
-        <div class="portfolio-overlay">
-          <h3 class="portfolio-title">Edwardian Flat</h3>
-          <p class="portfolio-desc">Sensitive modernization using breathable natural materials. Clapham, London.</p>
-        </div>
-      </div>
-
-      <div class="portfolio-item">
-        <div class="portfolio-placeholder">
-          <div class="icon">🏘️</div>
-          <p>Period Conversion - Camden</p>
-        </div>
-        <div class="portfolio-overlay">
-          <h3 class="portfolio-title">Period Conversion</h3>
-          <p class="portfolio-desc">Contemporary decoration respecting original architectural details. Camden, London.</p>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
 
-<!-- PROCESS -->
-<section class="section" id="process">
-  <div class="container">
-    <div class="services-intro">
-      <span class="section-tag">How It Works</span>
-      <h2 class="section-title">Simple, Straightforward Process</h2>
-      <p class="section-subtitle">From initial consultation to final polish, here's how we'll transform your period property together.</p>
+    <!-- PROJECT 2: VICTORIAN HACKNEY -->
+    <div class="portfolio-project">
+      <div class="portfolio-project-header">
+        <h3 class="portfolio-project-title">Victorian Terrace - Hackney</h3>
+        <p class="portfolio-project-desc">Period property brought into modern living with natural finishes, celebrating Victorian architecture while meeting contemporary lifestyle needs.</p>
+      </div>
+      <div class="portfolio-gallery">
+        <div class="portfolio-item">
+          <img src="victorian1-hackney.jpg" alt="Victorian Terrace Hackney - Transformation 1">
+        </div>
+        <div class="portfolio-item">
+          <img src="victorian2-hackney.jpg" alt="Victorian Terrace Hackney - Transformation 2">
+        </div>
+        <div class="portfolio-item">
+          <img src="victorian3-hackney.jpg" alt="Victorian Terrace Hackney - Transformation 3">
+        </div>
+        <div class="portfolio-item">
+          <img src="victorian4-hackney.jpg" alt="Victorian Terrace Hackney - Transformation 4">
+        </div>
+        <div class="portfolio-item">
+          <img src="victorian5-hackney.jpg" alt="Victorian Terrace Hackney - Transformation 5">
+        </div>
+        <div class="portfolio-item">
+          <img src="victorian6-hackney.jpg" alt="Victorian Terrace Hackney - Transformation 6">
+        </div>
+        <div class="portfolio-item">
+          <img src="victorian7-hackney.jpg" alt="Victorian Terrace Hackney - Transformation 7">
+        </div>
+        <div class="portfolio-item">
+          <img src="victorian8-hackney.jpg" alt="Victorian Terrace Hackney - Transformation 8">
+        </div>
+      </div>
     </div>
-    <div class="process-steps">
-      
-      <div class="process-step">
-        <div class="process-number">1</div>
-        <h3 class="process-step-title">Initial Consultation</h3>
-        <p class="process-step-desc">Free site visit to understand your property, discuss your vision, and assess the scope of work.</p>
-      </div>
 
-      <div class="process-step">
-        <div class="process-number">2</div>
-        <h3 class="process-step-title">Detailed Quote</h3>
-        <p class="process-step-desc">Comprehensive written quote, timeline, and period-appropriate recommendations.</p>
-      </div>
-
-      <div class="process-step">
-        <div class="process-number">3</div>
-        <h3 class="process-step-title">Expert Execution</h3>
-        <p class="process-step-desc">Professional decoration work using traditional techniques and high-quality natural materials.</p>
-      </div>
-
-      <div class="process-step">
-        <div class="process-number">4</div>
-        <h3 class="process-step-title">Final Walkthrough</h3>
-        <p class="process-step-desc">Complete inspection to ensure every detail meets your expectations and our quality standards.</p>
-      </div>
-
-    </div>
   </div>
 </section>
 
